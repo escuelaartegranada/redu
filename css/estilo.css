@@ -4,15 +4,178 @@
 	box-sizing:border-box;
 	text-decoration: none;
 	list-style: none;
-	font-family: 'Open Sans', sans-serif;
 }
 
 body, html {
+	font-family: 'Open Sans', sans-serif;
 	font-size:14px;
 }
 
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Oswald', sans-serif;
+	font-weight: normal;
+}
+
+header#header{
+	width: 100%;
+	min-height: 100vh;
+	background: url(../img/fondoCabecera.png) no-repeat center center ;
+	background-size: cover;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow:column;
+	color: #fff;
+}
+
+header#header h1{
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+header#header h1 span {
+	color: rgb(24, 207, 171);
+}
+header#header h2{
+	font-size: 3rem;
+	text-transform: uppercase;
+}
+header#header a{
+	color: #fff;
+	text-transform: uppercase;
+	background-color: rgb(24, 207, 171);
+	display: inline-block;
+	padding: 20px 30px;
+	margin-top: 40px;
+	border-radius: 5px;
+	border-top: solid 3px #fff;
+}
+
+section#llamadas{
+	width: 100%;
+	display: -ms-flex;
+	display: flex;
+	
+}
+
+section#llamadas div{
+	flex:1;
+	text-align: center;
+	padding: 100px 0;
+	
+}
+
+section#llamadas div:nth-child(2n){
+	color: #fff;
+	border-top: 5px solid #fff;
+	background-color: rgb(24, 207, 171);
+}
+
+section#llamadas div:nth-child(2n+1){
+	border-top: 5px solid rgb(24, 207, 171);
+	color: rgb(24, 207, 171);
+	background-color: rgb(28, 42, 51);
+}
+
+section#servicios {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
+	padding: 100px 0;
+}
+
+section#servicios h2{
+	width: 100%;
+	text-align: center;
+	font-size: 2rem;
+}
+section#servicios h2:after{
+	content: "";
+	display: block;
+	background-color: rgb(24, 207, 171);
+	width: 100px;
+	height: 5px;
+	margin: 10px auto;
+}
+section#servicios article{
+	width: 30%;
+	margin:50px 0;
+	}
+section#servicios article div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+} 
+
+section#servicios article div h4{
+	font-size: 1.3rem;
+	margin-left: 20px;
+
+}	
+
+section#servicios article p{
+	font-size: 1.1rem;
+	line-height: 140%;
+	color: #7c7c7c;
 
 }
 
+@media screen and (max-width: 768px){
+	
+	section#llamadas div{
+	padding: 60px 0;
+	
+}
+
+section#servicios {
+	width: 90%;
+}
+
+}
+
+
+@media screen and (max-width: 530px) {
+
+section#llamadas{
+	flex-wrap:wrap;
+	
+}
+
+section#llamadas div{
+flex-basis:50%;
+}	
+
+section#servicios article{
+	width: 50%;
+	}
+
+}
+
+@media screen and (max-width: 420px) { 
+
+header#header{
+	width: 100%;
+	min-height: 50vh;
+	
+}
+
+section#llamadas div{
+flex-basis:100%;
+}	
+
+section#servicios article{
+	width: 100%;
+
+	}
+section#servicios article div {
+	flex-flow:column;
+} 
+
+section#servicios article div h4{
+	margin-left: 0px;
+
+}	
+
+}
