@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Document</title>
+		<link rel="stylesheet" href="icons/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+		<style>
+			*{margin: 0;padding: 0;text-decoration: none;list-style: none;box-sizing:border-box;}
+
+			body,html{ font-family: "Oswald";}
+			a{color: #fff;}
+			header {
+				width: 100%;
+				background-color: tomato;
+				padding: 20px;
+				display: flex;
+				justify-content: space-between;
+				-ms-align-items: center;
+				align-items: center;
+			}	
+
+			header button {
+				background-color: #fff;
+				border:none;
+				padding: 10px;
+				cursor: pointer;
+				outline:none;
+				display: none;
+			
+			}	
+			
+			
+			header button:hover {
+				background-color: darkturquoise;
+	
+			}				
+			
+
+			nav a{				
+				margin-left: 20px;
+			}
+
+			.activo{
+				display: block;
+			}
+			@media screen and (max-width: 768px){
+				header{
+				 flex-flow:wrap;
+				}
+				header button {	
+				display: block;
+			}
+
+			nav {
+				width: 100%;
+				margin-top: 50px;	
+				display: none;
+			}
+
+			nav a{
+				display: block;
+				margin-left: 0;
+				padding: 20px 0;
+				border-top: solid 1px #fff;
+			}
+
+	
+			}
+	
+		</style>
+
+	</head>
+	<body>
+		
+	<header>
+		<a href="">LOGO</a>
+		<button class="menuMovil" type="button"><i class="icon-menu"></i></button>
+		<button class="cerrar" type="button"><i class="icon-cross"></i></button>
+		<nav class="menu">
+
+			<a href="">HOME</a>	
+			<a href="">SERVICIOS</a>
+			<a href="">SOPORTE</a>
+			<a href="">NOTICIAS</a>
+			<a href="">CONTACTO</a>
+		</nav>
+
+	</header>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+		$(function(){
+			$('.cerrar').hide();
+			$('.menuMovil').click(function(){
+				$('nav').slideToggle(500,function(){
+					$(this).toggleClass('activo').css('display','');
+					$('.menuMovil').hide();
+					$('.cerrar').show();
+				
+				});		
+			});
+			
+
+			$('.cerrar').click(function(){
+				$('nav').slideToggle(500,function(){
+					$(this).toggleClass('activo').css('display','');
+					$('.cerrar').hide();
+					$('.menuMovil').show();				
+				});		
+			});
+		
+		});	
+
+		</script>
+	</body>
+	</html>	
