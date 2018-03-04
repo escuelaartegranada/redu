@@ -5,10 +5,26 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<title>Ejercicio Responsive</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+		<link rel="stylesheet" href="icons/style.css">
 		<link rel="stylesheet" href="css/estilo.css">
 
 	</head>
 	<body>
+		<div id="navegacion">
+			
+		 	<a href="#">LOGO</a>
+			<button type="button" class="menuMovil"><span class="icon-menu"></span></button>
+			<nav class="menu">				
+				<a href="#">Home</a>
+				<a href="#">Servicios</a>
+				<a href="#">Soporte</a>
+				<a href="#">Trabajos</a>
+				<a href="#">Contacto</a>
+
+			</nav>
+		</div>
+		
+	
 
 		<header id="header">
 			<h1>Studio <span>WordPress</span></h1>
@@ -81,5 +97,31 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima nemo iste totam unde minus dolor, vero officia ex, blanditiis fugiat ipsum ipsa recusandae mollitia repudiandae nostrum iure deserunt repellat expedita.</p>
 			</article>
 		</section>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+
+
+$( document ).ready(function() {
+
+// $( ".button.menuMovil").hide();
+
+$( ".hamburger" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".hamburger" ).hide();
+$( ".cross" ).show();
+});
+});
+
+$( ".cross" ).click(function() {
+$( ".menu" ).slideToggle( "slow", function() {
+$( ".cross" ).hide();
+$( ".hamburger" ).show();
+});
+});
+
+});
+
+		</script>
 	</body>
 	</html>	
