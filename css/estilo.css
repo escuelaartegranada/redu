@@ -18,13 +18,19 @@ h1,h2,h3,h4,h5,h6{
 div#navegacion{
 	width: 100%;
 	padding: 20px;
-	background-color: #fff;
+	background-color: #18CFAB;
 	display: flex;
 	align-items:center;
 	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	box-shadow:  0 2px 5px rgba(0,0,0,.4);
 
 }
 
+div#navegacion a{
+	color: #fff;
+}
 button.menuMovil{
 	margin-left: auto;
 	background-color: black;
@@ -35,7 +41,6 @@ button.menuMovil{
 }
 
 button.menuMovil:hover{
-	background-color: rgb(24, 207, 171);
 	cursor: pointer;
 }
 button.menuMovil span{ 
@@ -159,9 +164,39 @@ section#servicios article p{
 
 }
 
+
+.activo{
+	display: block;
+}
 @media screen and (max-width: 768px){
+
+div#navegacion{
+	flex-flow:wrap;
+
 	
-	section#llamadas div{
+}
+
+button.menuMovil{
+	display: block;
+
+}
+
+nav{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+	display: none;
+}
+div#navegacion nav.menu a{
+	margin-left: 0;
+	display: block;
+	padding: 20px 0;
+	border-top: solid 1px rgba(255,255,255,.5);
+	color: #fff;
+}
+
+	
+section#llamadas div{
 	padding: 60px 0;
 	
 }
@@ -170,34 +205,7 @@ section#servicios {
 	width: 90%;
 }
 
-div#navegacion{
-	background-color: #007A78;
-	flex-flow:wrap;
 
-}
-
-div#navegacion nav.menu{
-	background-color: #007A78;
-}
-
-button.menuMovil{
-	display: block;
-
-}
-
-
-
-div#navegacion nav.menu{
-	width: 100%;
-
-	text-align: center;
-}
-div#navegacion nav.menu a{
-	display: block;
-	padding: 10px 0;
-	border-bottom: solid 1px rgba(255,255,255,.5);
-	color: #fff;
-}
 
 }
 
@@ -216,13 +224,6 @@ flex-basis:50%;
 section#servicios article{
 	width: 50%;
 	}
-
-
-
-
-
-
-
 }
 
 @media screen and (max-width: 420px) { 
@@ -255,33 +256,3 @@ section#servicios article div h4{
 
 
 
-.hamburger{
-  background:none;
-  position:absolute;
-  top:0;
-  right:0;
-  line-height:45px;
-  padding:5px 15px 0px 15px;
-  color:#999;
-  border:0;
-  font-size:1.4em;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
-}
-.cross{
-  background:none;
-  position:absolute;
-  top:0px;
-  right:0;
-  padding:7px 15px 0px 15px;
-  color:#999;
-  border:0;
-  font-size:3em;
-  line-height:65px;
-  font-weight:bold;
-  cursor:pointer;
-  outline:none;
-  z-index:10000000000000;
-}

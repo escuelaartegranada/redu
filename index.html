@@ -15,7 +15,7 @@
 		 	<a href="#">LOGO</a>
 			<button type="button" class="menuMovil"><span class="icon-menu"></span></button>
 			<nav class="menu">				
-				<a href="#">Home</a>
+				<a href="#home">Home</a>
 				<a href="#">Servicios</a>
 				<a href="#">Soporte</a>
 				<a href="#">Trabajos</a>
@@ -100,27 +100,14 @@
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script>
+		$(function(){
+			$('.menuMovil').click(function(){
+				$('nav').slideToggle(500, function(){
+					$(this).toggleClass('activo').css('display','');
+				});
+			});
+		});
 
-
-$( document ).ready(function() {
-
-// $( ".button.menuMovil").hide();
-
-$( ".hamburger" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".hamburger" ).hide();
-$( ".cross" ).show();
-});
-});
-
-$( ".cross" ).click(function() {
-$( ".menu" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hamburger" ).show();
-});
-});
-
-});
 
 		</script>
 	</body>
